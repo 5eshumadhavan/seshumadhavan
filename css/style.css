@@ -9,6 +9,8 @@ font-size: 62.5%;
     --color-headings:#1b0760;
     --color-body:#918ca4;
 }
+
+/* Typography */
 body{
     font-family: 'Inter',Arial, Helvetica, sans-serif;
     color:var(--color-body);
@@ -48,3 +50,26 @@ p{
     
 }
 
+/* Links */
+.link-arrow{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:var(--color-accent);
+    font-weight: bold;
+    font-size: 2rem;
+}
+.link-arrow::after{
+    content:"-->";
+    margin-left: 5px;
+    transition: margin 0.15s;
+}
+
+.link-arrow:hover::after{
+    margin-left: 10px;
+}
+
+@media screen and (min-width:1024px){
+    .link-arrow{
+        font-size: 1.5rem;
+    }
+}
